@@ -77,7 +77,7 @@ header {
   padding: 120px 56px 80px;
 }
 
-.chips { display: flex; gap: 8px; margin-bottom: 28px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; max-width: 460px; }
 
 .chips span {
   font-size: 12.5px;
