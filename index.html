@@ -1,400 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ray Hettleman — Software Engineer</title>
+<meta name="description" content="Ray Hettleman is a software engineer in Orange, California.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="grid-bg"></div>
+
+<div class="grain" aria-hidden="true"></div>
 
 <nav>
-  <div class="logo">ray<span>.dev</span></div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Work</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div class="wordmark">ray</div>
+  <div class="nav-links">
+    <a href="#top" class="active">home</a>
+    <a href="#about">about</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
+  </div>
 </nav>
 
-<main>
-  <section id="hero">
-    <div class="hero-tag">Available for new opportunities</div>
+<header id="top">
+  <div class="hero-text">
+    <div class="chips">
+      <span>typescript</span>
+      <span>react</span>
+      <span>node</span>
+    </div>
     <h1>
-      Ray Hettleman<br>
-      building the <span class="gradient-text">web</span>, one pixel at a time.
+      Hello, I'm<br>
+      <em>Ray&nbsp;Hettleman</em>
     </h1>
-    <p class="hero-sub">
-      <strong>Software Engineer</strong> based in Orange, CA — crafting full-stack
-      applications with a focus on clean code, modern interfaces, and thoughtful UX.
+    <p>
+      A full-stack developer with a software engineering degree from
+      Chapman University
     </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">
-        View my work
-        <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="mailto:hettleman2@gmail.com" class="btn btn-ghost">
-        Get in touch
-      </a>
+    <div class="hero-actions">
+      <a class="btn btn-fill" href="mailto:hettleman2@gmail.com">Get in touch <span class="arrow">&#8594;</span></a>
+      <a class="btn btn-line" href="#projects">View projects</a>
+    </div>
+  </div>
+
+  <div class="hero-art">
+    <svg viewBox="0 0 620 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Retro illustration of a smart TV, chrome shapes and keyboard keys">
+      <defs>
+        <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f5f7ff"/>
+          <stop offset="0.35" stop-color="#9fb6ff"/>
+          <stop offset="0.6" stop-color="#3c4566"/>
+          <stop offset="0.78" stop-color="#ff8a5c"/>
+          <stop offset="1" stop-color="#62e6e0"/>
+        </linearGradient>
+        <linearGradient id="chrome2" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#62e6e0"/>
+          <stop offset="0.4" stop-color="#dfe6ff"/>
+          <stop offset="0.7" stop-color="#525d85"/>
+          <stop offset="1" stop-color="#ff8a5c"/>
+        </linearGradient>
+        <radialGradient id="orb" cx="0.35" cy="0.3" r="1">
+          <stop offset="0" stop-color="#3a3654"/>
+          <stop offset="0.55" stop-color="#16142a"/>
+          <stop offset="1" stop-color="#0b0a18"/>
+        </radialGradient>
+        <filter id="grainf">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/>
+          <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.6 0.6 0.6 0 0"/>
+          <feComposite operator="in" in2="SourceGraphic"/>
+        </filter>
+        <pattern id="stripes" width="10" height="9" patternUnits="userSpaceOnUse">
+          <rect width="10" height="3.2" fill="#7e64e0"/>
+        </pattern>
+      </defs>
+
+      <!-- halftone stripe blocks -->
+      <rect x="330" y="60" width="230" height="150" fill="url(#stripes)" opacity="0.5"/>
+      <rect x="60" y="300" width="200" height="120" fill="url(#stripes)" opacity="0.35"/>
+
+      <!-- dark spheres -->
+      <circle cx="455" cy="78" r="52" fill="url(#orb)" stroke="#8d72f0" stroke-width="1.5"/>
+      <circle cx="556" cy="160" r="40" fill="url(#orb)" stroke="#8d72f0" stroke-width="1.5"/>
+      <circle cx="540" cy="300" r="58" fill="url(#orb)" stroke="#8d72f0" stroke-width="1.5"/>
+
+      <!-- chrome torus -->
+      <g transform="rotate(-24 132 196)">
+        <ellipse cx="132" cy="196" rx="72" ry="44" fill="none" stroke="url(#chrome)" stroke-width="26"/>
+      </g>
+
+      <!-- smart TV with eye -->
+      <g>
+        <rect x="240" y="120" width="220" height="160" rx="12" fill="#100e20" stroke="#8d72f0" stroke-width="2"/>
+        <rect x="252" y="132" width="196" height="136" rx="8" fill="#0a0916"/>
+        <!-- eye -->
+        <path d="M270 200 Q350 142 430 200 Q350 258 270 200 Z" fill="#0d0b1c" stroke="#cfd6ff" stroke-width="2"/>
+        <circle cx="350" cy="200" r="30" fill="url(#chrome2)"/>
+        <circle cx="350" cy="200" r="12" fill="#0a0916"/>
+        <circle cx="341" cy="191" r="5" fill="#f2f3f8"/>
+        <!-- stand -->
+        <rect x="330" y="280" width="40" height="10" rx="4" fill="#8d72f0" opacity="0.7"/>
+      </g>
+
+      <!-- keyboard keys: R A Y -->
+      <g transform="translate(238 318) skewX(-12)">
+        <g>
+          <rect x="0" y="0" width="64" height="64" rx="10" fill="#171430" stroke="#8d72f0" stroke-width="2"/>
+          <text x="32" y="42" text-anchor="middle" font-family="inherit" font-size="26" font-weight="700" fill="#cfd6ff">R</text>
+        </g>
+        <g transform="translate(76 14)">
+          <rect x="0" y="0" width="64" height="64" rx="10" fill="url(#chrome)"/>
+          <text x="32" y="42" text-anchor="middle" font-family="inherit" font-size="26" font-weight="700" fill="#14122a">A</text>
+        </g>
+        <g transform="translate(152 28)">
+          <rect x="0" y="0" width="64" height="64" rx="10" fill="#171430" stroke="#8d72f0" stroke-width="2"/>
+          <text x="32" y="42" text-anchor="middle" font-family="inherit" font-size="26" font-weight="700" fill="#cfd6ff">Y</text>
+        </g>
+      </g>
+
+      <!-- chrome capsule -->
+      <g transform="rotate(28 92 96)">
+        <rect x="52" y="76" width="80" height="40" rx="20" fill="url(#chrome2)"/>
+      </g>
+
+      <!-- guitar fretboard fragment -->
+      <g transform="translate(468 376) rotate(-8)">
+        <rect x="0" y="0" width="110" height="56" rx="6" fill="#171430" stroke="#8d72f0" stroke-width="1.5"/>
+        <line x1="28" y1="0" x2="28" y2="56" stroke="#5a4d9e" stroke-width="2"/>
+        <line x1="56" y1="0" x2="56" y2="56" stroke="#5a4d9e" stroke-width="2"/>
+        <line x1="84" y1="0" x2="84" y2="56" stroke="#5a4d9e" stroke-width="2"/>
+        <line x1="0" y1="14" x2="110" y2="14" stroke="#cfd6ff" stroke-width="1"/>
+        <line x1="0" y1="28" x2="110" y2="28" stroke="#cfd6ff" stroke-width="1"/>
+        <line x1="0" y1="42" x2="110" y2="42" stroke="#cfd6ff" stroke-width="1"/>
+        <circle cx="42" cy="28" r="6" fill="#ff8a5c"/>
+        <circle cx="70" cy="14" r="6" fill="#62e6e0"/>
+      </g>
+
+      <!-- grain pass over the art -->
+      <rect width="620" height="480" filter="url(#grainf)" opacity="0.22"/>
+    </svg>
+  </div>
+
+  <a class="scroll-cue" href="#about">Scroll to discover<span>&#8595;</span></a>
+</header>
+
+<main>
+
+  <section id="about" class="reveal">
+    <h2><span class="tick"></span>about</h2>
+    <div class="about-cols">
+      <p>
+        I'm a recent Chapman University graduate with a B.S. in software
+        engineering. I spent two summers at Velope building smart-TV apps —
+        the first summer in JavaScript, the second rebuilding the same app in
+        TypeScript and mentoring the intern who took my old seat.
+      </p>
+      <p>
+        My most recent professional project is HouseFlipDude, a deal-tracking
+        platform for real-estate investors that I built with a team of
+        six, shipping something new every week. I'm looking for a full-time
+        engineering role.
+      </p>
     </div>
   </section>
 
-  <section id="about">
-    <div class="section-label">01 / About</div>
-    <h2>Engineer, student,<br>perpetual learner.</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          I'm a Software Engineering student at <strong>Chapman University</strong>
-          (Class of 2026) with hands-on experience shipping production applications.
-          Two summers at <strong>Velope</strong> gave me deep experience building
-          smart TV apps — first in JavaScript, then rebuilding the whole thing in
-          TypeScript as a returning senior intern.
-        </p>
-        <p>
-          I care about details: accurate data, clean code, and interfaces that feel
-          effortless to use. Outside of code, I tutor high school math, played lacross
-          for my university, and enjoy my Tuesday night basketball men's league.
-        </p>
-      </div>
-      <div class="about-stats">
-        <div class="stat">
-          <div class="stat-value">3.5</div>
-          <div class="stat-label">GPA · Chapman</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">2×</div>
-          <div class="stat-label">Velope Internships</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">9+</div>
-          <div class="stat-label">Languages / Frameworks</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">$80K</div>
-          <div class="stat-label">Dean's Scholarship</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="projects" class="reveal">
+    <h2><span class="tick"></span>projects</h2>
+    <div class="cards">
 
-  <section id="projects">
-    <div class="section-label">02 / Selected Work</div>
-    <h2>Projects I'm proud of.</h2>
-    <div class="project-grid">
-
-      <article class="project" data-tilt>
-        <div class="project-top">
-          <div>
-            <div class="project-title">
-              HouseFlipDude
-              <span class="live-dot" title="Live — in active development"></span>
-            </div>
-            <div class="project-meta">Real Estate Investing Platform · In Development · 2026</div>
-          </div>
-          <div class="project-links">
-            <a href="https://houseflipdude.com" target="_blank" rel="noopener" class="project-link">
-              Live site
-              <svg class="icon" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
-          </div>
+      <article class="card">
+        <div class="card-head">
+          <h3>HouseFlipDude</h3>
+          <a class="card-link" href="https://houseflipdude.com" target="_blank" rel="noopener">visit &#8599;</a>
         </div>
+        <p class="card-meta">2026 · in progress · team of six</p>
         <p>
-          Currently shipping HouseFlipDude.com alongside a six-engineer team — a
-          platform that lets real estate investors track deals end-to-end. I lead the
-          frontend: built the authentication and login flows, the deal tracker (with
-          the ability to assign individual deals directly to specific investors), and
-          the integration layer that wires the UI into our backend database and web
-          scraper. Started March 2026, shipping new features weekly.
+          A platform for real-estate investors to track deals from first call
+          to closing. I work on the frontend: login and auth flows, the deal
+          tracker with per-investor assignment, and the layer connecting the
+          UI to our database and web scraper.
         </p>
-        <div class="tech-stack">
-          <span class="tech">Frontend Lead</span>
-          <span class="tech">Auth / Login</span>
-          <span class="tech">Database Integration</span>
-          <span class="tech">Web Scraping</span>
-          <span class="tech">Team of 6</span>
-          <span class="tech">In Development</span>
-        </div>
+        <div class="tags"><span>react</span><span>auth</span><span>frontend</span></div>
       </article>
 
-      <article class="project" data-tilt>
-        <div class="project-top">
-          <div>
-            <div class="project-title">
-              OTT-O-RAMA
-              <span class="live-dot" title="Live"></span>
-            </div>
-            <div class="project-meta">Smart TV App · Velope Internship '24</div>
-          </div>
-          <div class="project-links">
-            <a href="https://ott-o-rama.vercel.app" target="_blank" rel="noopener" class="project-link">
-              Live site
-              <svg class="icon" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
-          </div>
+      <article class="card">
+        <div class="card-head">
+          <h3>OTT&#8209;O&#8209;RAMA</h3>
+          <a class="card-link" href="https://ott-o-rama.vercel.app" target="_blank" rel="noopener">visit &#8599;</a>
         </div>
+        <p class="card-meta">2024, rewritten 2025 · Velope</p>
         <p>
-          A Netflix-style streaming interface engineered from scratch, pulling
-          continuously updated data from TheMovieDatabase API to surface the week's
-          most popular films. Focused heavily on UI/UX polish — buttery navigation,
-          fast responses, and a feel that works as well on a TV remote as a browser.
+          A streaming-style smart-TV interface pulling the week's most popular
+          films from the TMDb API. Built in JavaScript my first summer, then I
+          led a full TypeScript rewrite the next. The whole thing has to work
+          with a TV remote, which is harder than it sounds.
         </p>
-        <div class="tech-stack">
-          <span class="tech">JavaScript</span>
-          <span class="tech">Lightning Framework</span>
-          <span class="tech">TMDb API</span>
-          <span class="tech">Async / REST</span>
-          <span class="tech">Vercel</span>
-        </div>
+        <div class="tags"><span>typescript</span><span>lightning</span><span>tmdb api</span></div>
       </article>
 
-      <article class="project" data-tilt>
-        <div class="project-top">
-          <div>
-            <div class="project-title">OTT-O-RAMA v2</div>
-            <div class="project-meta">TypeScript Rewrite · Velope Internship '25</div>
-          </div>
+      <article class="card">
+        <div class="card-head">
+          <h3>Music Lounge</h3>
+          <a class="card-link" href="https://music-lounge-nine.vercel.app" target="_blank" rel="noopener">visit &#8599;</a>
         </div>
+        <p class="card-meta">personal project</p>
         <p>
-          Returning as a senior intern, I led the full rebuild of the OTT-O-RAMA
-          platform in TypeScript — cleaner architecture, stricter typing, and more
-          scalable async patterns for high-traffic, real-time data. Also mentored a
-          first-time intern through onboarding and reviewed their code for quality
-          and consistency.
+          A guitar fretboard in the browser. Click notes on any string and it
+          names the chord; drag the capo and the fretboard shifts; press strum
+          to hear it. Plain JavaScript and the Web Audio API — exists because
+          I got tired of looking up chord shapes.
         </p>
-        <div class="tech-stack">
-          <span class="tech">TypeScript</span>
-          <span class="tech">Lightning Framework</span>
-          <span class="tech">API Management</span>
-          <span class="tech">Code Review</span>
-          <span class="tech">Mentorship</span>
-        </div>
+        <div class="tags"><span>javascript</span><span>web audio</span><span>music theory</span></div>
       </article>
 
-      <article class="project" data-tilt>
-        <div class="project-top">
-          <div>
-            <div class="project-title">Ski Shop Rental Interface</div>
-            <div class="project-meta">Donner Ski Shop · Soda Springs, CA</div>
-          </div>
+      <article class="card">
+        <div class="card-head">
+          <h3>Ski Shop Rental System</h3>
         </div>
+        <p class="card-meta">Donner Ski Shop · Soda Springs, CA</p>
         <p>
-          Led a small team to design and build a digital rental-management interface
-          for a local ski shop, replacing paper record-keeping. The result: faster
-          customer turnaround, cleaner reporting, and a significant bump in the
-          shop's day-to-day operational efficiency.
+          A rental-management interface that replaced a local ski shop's paper
+          records. I led a small team through design and build. Renting skis
+          got faster, and the end-of-day bookkeeping stopped being an
+          argument.
         </p>
-        <div class="tech-stack">
-          <span class="tech">Team Lead</span>
-          <span class="tech">Full-Stack</span>
-          <span class="tech">Workflow Design</span>
-        </div>
-      </article>
-
-      <article class="project" data-tilt>
-        <div class="project-top">
-          <div>
-            <div class="project-title">
-              Music Lounge
-              <span class="live-dot" title="Live"></span>
-            </div>
-            <div class="project-meta">Interactive Guitar Chord Identifier · Personal Project</div>
-          </div>
-          <div class="project-links">
-            <a href="https://music-lounge-nine.vercel.app" target="_blank" rel="noopener" class="project-link">
-              Live site
-              <svg class="icon" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
-          </div>
-        </div>
-        <p>
-          A visual guitar fretboard where you click notes across all six strings and
-          the app identifies the chord in real time. Includes a draggable capo that
-          shifts the entire fretboard, a strum button to hear the selected notes
-          played together, and a one-click clear to reset. Built entirely in the
-          browser with no dependencies.
-        </p>
-        <div class="tech-stack">
-          <span class="tech">JavaScript</span>
-          <span class="tech">HTML / CSS</span>
-          <span class="tech">Music Theory</span>
-          <span class="tech">Chord Detection</span>
-          <span class="tech">Web Audio</span>
-          <span class="tech">Vercel</span>
-        </div>
+        <div class="tags"><span>team lead</span><span>full-stack</span></div>
       </article>
 
     </div>
   </section>
 
-  <section id="experience">
-    <div class="section-label">03 / Experience</div>
-    <h2>Where I've been.</h2>
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-date">Summer 2025</div>
-        <div class="timeline-role">Senior Application Development Intern</div>
-        <div class="timeline-company">Velope · SF Bay Area, CA</div>
-        <ul class="timeline-desc">
-          <li>Rebuilt the smart TV application in TypeScript for cleaner, more scalable code</li>
-          <li>Mentored a first-time intern, accelerating their onboarding</li>
-          <li>Expanded expertise in async patterns and API management for real-time data</li>
-          <li>Reviewed peer code to keep deliverables aligned with company standards</li>
-        </ul>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">Jan 2025 — Present</div>
-        <div class="timeline-role">High School Mathematics Tutor</div>
-        <div class="timeline-company">Independent · Orange, CA</div>
-        <ul class="timeline-desc">
-          <li>Design tailored learning plans around each student's academic needs</li>
-          <li>Analyzed student performance data and improved classroom outcomes by a full grade level</li>
-          <li>Continually update methods based on current educational best practices</li>
-        </ul>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">Summer 2024</div>
-        <div class="timeline-role">Application Development Intern</div>
-        <div class="timeline-company">Velope · SF Bay Area, CA</div>
-        <ul class="timeline-desc">
-          <li>Developed a smart TV app for streaming top weekly movies</li>
-          <li>Built deep fluency with the Lightning JavaScript framework</li>
-          <li>Mastered async functions and API integration against volatile datasets</li>
-        </ul>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">2022 — 2026</div>
-        <div class="timeline-role">B.S. Software Engineering</div>
-        <div class="timeline-company">Chapman University · Orange, CA · GPA 3.5</div>
-        <ul class="timeline-desc">
-          <li>Coursework: Data Structures &amp; Algorithms (C++), Software Requirements &amp; Testing (Java), SDLC (C#), Python foundations</li>
-          <li>Recipient of the Dean's Scholarship ($80,000) and Provost List Honors (Fall 2022)</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div style="margin-top: 72px;">
-      <div class="section-label" style="margin-top: 0;">Stack</div>
-      <h2 style="margin-bottom: 32px;">Tools of the trade.</h2>
-      <div class="skills-grid">
-        <div class="skill-cat">
-          <h3>Languages</h3>
-          <div class="skill-list">
-            <span>TypeScript</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>Java</span>
-            <span>C++</span>
-            <span>C#</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
+  <section id="experience" class="reveal">
+    <h2><span class="tick"></span>experience</h2>
+    <div class="xp">
+      <div class="xp-row">
+        <div class="xp-when">summers '24 &amp; '25</div>
+        <div>
+          <h3>Velope — application development intern</h3>
+          <p>
+            Invited back the second summer as a senior intern. Built and then
+            rebuilt a smart-TV app on the Lightning framework, worked against
+            live API data, reviewed code, and mentored a first-time intern.
+          </p>
         </div>
-        <div class="skill-cat">
-          <h3>Frameworks</h3>
-          <div class="skill-list">
-            <span>React</span>
-            <span>Lightning</span>
-            <span>Node</span>
-          </div>
+      </div>
+      <div class="xp-row">
+        <div class="xp-when">jan 2025 — May 2026</div>
+        <div>
+          <h3>Independent math tutor</h3>
+          <p>
+            High-school math, here in Orange. I build each student a plan
+            around where they actually are, not where the syllabus says they
+            should be. One student came up a full letter grade.
+          </p>
         </div>
-        <div class="skill-cat">
-          <h3>Tools &amp; Workflow</h3>
-          <div class="skill-list">
-            <span>Git / GitHub</span>
-            <span>Jira</span>
-            <span>Linux</span>
-            <span>REST APIs</span>
-            <span>Functional Testing</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <h3>Also</h3>
-          <div class="skill-list">
-            <span>Conversational Spanish</span>
-            <span>Code Review</span>
-            <span>Mentorship</span>
-          </div>
+      </div>
+      <div class="xp-row">
+        <div class="xp-when">2022 — 2026</div>
+        <div>
+          <h3>Chapman University — B.S. software engineering</h3>
+          <p>
+            3.5 GPA, Dean's Scholarship, Provost List honors. Coursework in
+            data structures and algorithms (C++), software testing (Java),
+            and the development lifecycle (C#).
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="section-label" style="justify-content: center;">04 / Contact</div>
-    <h2>Let's build <span class="gradient-text">something</span>.</h2>
-    <p class="lead">
-      Open to internships, new-grad roles, and interesting collaborations.
-      The fastest way to reach me is email.
+  <section id="contact" class="reveal contact">
+    <h2><span class="tick"></span>contact</h2>
+    <p class="contact-big">Let's talk.</p>
+    <p class="contact-sub">
+      Open to full-time roles and interesting collaborations. Email is fastest.
     </p>
-    <div class="contact-links">
-      <a href="mailto:hettleman2@gmail.com" class="btn btn-primary">
-        hettleman2@gmail.com
-        <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </a>
-      <a href="https://ott-o-rama.vercel.app" target="_blank" rel="noopener" class="btn btn-ghost">
-        View OTT-O-RAMA
-        <svg class="icon" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
+    <a class="btn btn-fill" href="mailto:hettleman2@gmail.com">hettleman2@gmail.com <span class="arrow">&#8594;</span></a>
   </section>
+
 </main>
 
 <footer>
-  <div>© 2026 Ray Hettleman</div>
-  <div>Designed &amp; built with care.</div>
+  <div>&copy; 2026 Ray Hettleman · Orange, CA</div>
+  <div>Last updated June 2026</div>
 </footer>
 
 <script>
-  // Subtle mouse-follow glow on project cards
-  document.querySelectorAll('.project').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
-    });
-  });
-
-  // Reveal sections on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('section:not(#hero)').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(24px)';
-    section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    observer.observe(section);
-  });
-
-  // Nav hide on scroll down, show on scroll up
-  let lastScroll = 0;
-  const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    const cur = window.scrollY;
-    if (cur > lastScroll && cur > 200) {
-      nav.style.transform = 'translateY(-100%)';
-    } else {
-      nav.style.transform = 'translateY(0)';
+  const obs = new IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
     }
-    nav.style.transition = 'transform 0.3s ease';
-    lastScroll = cur;
-  });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
+
 </body>
 </html>
